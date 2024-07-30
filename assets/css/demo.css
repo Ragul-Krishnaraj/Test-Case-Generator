@@ -580,3 +580,7 @@ ul {
     background: transparent;
  }
 }
+
+.alert-info {
+  border-left: 4px solid #31ce36 !important;
+}

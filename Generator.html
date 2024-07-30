@@ -605,6 +605,12 @@
               </div>
             </div>
           </div>
+
+          <button id="displayNotif" class="btn btn-success">
+            Display
+          </button>
+
+          
       <footer class="footer">
                <div class="container-fluid d-flex justify-content-between">
                   <div class="copyright">
@@ -621,10 +627,17 @@
          </div>
          <!-- End Custom template -->
       </div>
+
+   
+
+
+
       <script src="assets/js/core/jquery-3.7.1.min.js"></script>
       <script src="assets/js/core/popper.min.js"></script>
       <script src="assets/js/sweetalert.min.js"></script>
       <script src="assets/js/core/bootstrap.min.js"></script>
+          <!-- Bootstrap Notify -->
+      <script src="assets/js/bootstrap-notify.min.js"></script>
       <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
       <script src="assets/js/custom.min.js"></script>
       <script>
@@ -675,5 +688,39 @@
           SweetAlert2Demo.init();
          });
       </script>
+
+<!-- success message ntficatin script -->
+<script>
+   $("#displayNotif").on("click", function () {
+     var placementFrom = $("#notify_placement_from option:selected").val();
+     var placementAlign = $("#notify_placement_align option:selected").val();
+     var state = $("#notify_state option:selected").val();
+     var style = $("#notify_style option:selected").val();
+     var content = {};
+
+     content.message =
+       'File uploaded successfully! Job ID: 66a8cb1f50e37c3d9e145f66';
+     content.title = "Bootstrap notify";
+     if (style == "withicon") {
+       content.icon = "fa fa-bell";
+     } else {
+       content.icon = "none";
+     }
+     content.url = "index.html";
+     content.target = "_blank";
+
+     $.notify(content, {
+       type: state,
+       placement: {
+         from: placementFrom,
+         align: placementAlign,
+       },
+       time: 1000,
+       delay: 0,
+     });
+   });
+ </script>
+
+
    </body>
 </html>
