@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Volante Test Case Generator - Generator</title>
+      <meta
+         content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+         name="viewport"
+         />
+      <link rel="icon" href="assets/img/favicon.png" type="image/x-icon"/>
+      <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="assets/css/plugins.min.css" />
+      <link rel="stylesheet" href="assets/css/custommin.min.css" />
+      <link rel="stylesheet" href="assets/css/demo.css" />
+      <script>
+         WebFont.load({
+           google: { families: ["Public Sans:300,400,500,600,700"] },
+           custom: {
+             families: [
+               "Font Awesome 5 Solid",
+               "Font Awesome 5 Regular",
+               "Font Awesome 5 Brands",
+               "simple-line-icons",
+             ],
+             urls: ["assets/css/fonts.min.css"],
+           },
+           active: function () {
+             sessionStorage.fonts = true;
+           },
+         });
+      </script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <!-- Sidebar -->
+         <div class="sidebar" data-background-color="dark">
+            <div class="sidebar-logo">
+               <!-- Logo Header -->
+               <div class="logo-header" data-background-color="dark">
+                  <a href="index.html" class="logo">
+                  <img
+                     src="assets/img/logo-white.png"
+                     alt="navbar brand"
+                     class="navbar-brand"
+                     height="32"
+                     />
+                  </a>
+                  <div class="nav-toggle">
+                     <button class="btn btn-toggle toggle-sidebar">
+                     <i class="gg-menu-right"></i>
+                     </button>
+                     <button class="btn btn-toggle sidenav-toggler">
+                     <i class="gg-menu-left"></i>
+                     </button>
+                  </div>
+                  <button class="topbar-toggler more">
+                  <i class="gg-more-vertical-alt"></i>
+                  </button>
+               </div>
+               <!-- End Logo Header -->
+            </div>
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+               <div class="sidebar-content">
+                  <ul class="nav nav-secondary">
+                     <li class="nav-item">
+                        <a href="widgets.html">
+                           <i class="fas fa-home"></i>
+                           <p>Home</p>
+                        </a>
+                     </li>
+                     <li class="nav-section">
+                        <span class="sidebar-mini-icon">
+                        <i class="fa fa-ellipsis-h"></i>
+                        </span>
+                        <h4 class="text-section">Uploads</h4>
+                     </li>
+                     <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarLayouts">
+                           <i class="fas fa-th-list"></i>
+                           <p>BRD File </p>
+                           <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="sidebarLayouts">
+                           <ul class="nav nav-collapse">
+                              <li>
+                                 <a href="sidebar-style-2.html">
+                                 <span class="sub-item">Upload BRD File</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="icon-menu.html">
+                                 <span class="sub-item">View BRD Files</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li class="nav-item active">
+                        <a href="widgets.html">
+                           <i class="fas fa-desktop"></i>
+                           <p>Generator</p>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- End Sidebar -->
+         <div class="main-panel">
+            <div class="main-header">
+               <div class="main-header-logo">
+                  <!-- Logo Header -->
+                  <div class="logo-header" data-background-color="dark">
+                     <a href="../index.html" class="logo">
+                     <img
+                        src="../assets/img/kaiadmin/logo_light.svg"
+                        alt="navbar brand"
+                        class="navbar-brand"
+                        height="20"
+                        />
+                     </a>
+                     <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                        <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                        <i class="gg-menu-left"></i>
+                        </button>
+                     </div>
+                     <button class="topbar-toggler more">
+                     <i class="gg-more-vertical-alt"></i>
+                     </button>
+                  </div>
+                  <!-- End Logo Header -->
+               </div>
+               <!-- Navbar Header -->
+               <nav
+                  class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom"
+                  >
+                  <div class="container-fluid">
+                     <nav
+                        class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
+                        >
+                        <div class="input-group">
+                           <div class="input-group-prepend">
+                              <button type="submit" class="btn btn-search pe-1">
+                              <i class="fa fa-search search-icon"></i>
+                              </button>
+                           </div>
+                           <input
+                              type="text"
+                              placeholder="Search ..."
+                              class="form-control"
+                              />
+                        </div>
+                     </nav>
+                     <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                        <li
+                           class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none"
+                           >
+                           <a
+                              class="nav-link dropdown-toggle"
+                              data-bs-toggle="dropdown"
+                              href="#"
+                              role="button"
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              >
+                           <i class="fa fa-search"></i>
+                           </a>
+                           <ul class="dropdown-menu dropdown-search animated fadeIn">
+                              <form class="navbar-left navbar-form nav-search">
+                                 <div class="input-group">
+                                    <input
+                                       type="text"
+                                       placeholder="Search ..."
+                                       class="form-control"
+                                       />
+                                 </div>
+                              </form>
+                           </ul>
+                        </li>
+                        <li class="nav-item topbar-user dropdown hidden-caret">
+                           <a
+                              class="dropdown-toggle profile-pic"
+                              data-bs-toggle="dropdown"
+                              href="#"
+                              aria-expanded="false"
+                              >
+                              <div class="avatar-sm">
+                                 <img
+                                    src="assets/img/avatar.jpg"
+                                    alt="..."
+                                    class="avatar-img rounded-circle"
+                                    />
+                              </div>
+                              <span class="profile-username">
+                              <span class="op-7">Hi,</span>
+                              <span class="fw-bold">Ragul K</span>
+                              </span>
+                           </a>
+                           <ul class="dropdown-menu dropdown-user animated fadeIn">
+                              <div class="dropdown-user-scroll scrollbar-outer">
+                                 <li>
+                                    <div class="user-box">
+                                       <div class="u-text">
+                                          <h4>Ragul K</h4>
+                                          <p class="text-muted">ragulkrishnaraj@volantetech.com</p>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item me-2" href="#">Logout</a>
+                                 </li>
+                              </div>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </nav>
+               <!-- End Navbar -->
+            </div>
+            <div class="container">
+               <div class="col-md-12">
+                  <div class="card">
+                     <div class="card-header">
+                        <div class="d-flex align-items-center">
+                           <h4 class="card-title">Jobs List
+                           </h4>
+                        </div>
+                     </div>
+                     <div class="card-body">
+                        <div class="table-responsive">
+                           <table
+                              id="add-row"
+                              class="display table table-striped table-hover"
+                              >
+                              <thead>
+                                 <tr>
+                                    <th>Date</th>
+                                    <th>Job Name</th>
+                                    <th>Job ID</th>
+                                    <th>Generate Scenario</th>
+                                    <th>View Scenario</th>
+                                    <th>Generate Test Case</th>
+                                    <th>View Test Case</th>
+                                    <th style="width: 10%">Delete</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>2024-07-24	</td>
+                                    <td>AZQSESOW1	</td>
+                                    <td>JOB001</td>
+                                    <td>
+                                      
+                                       <button class="btn btn-primary btn-round ms-auto btn btn-link btn-warning" data-bs-toggle="modal" data-bs-target="#Generate-Scenerio-Modal">
+                                        <i class="fas fa-eye"></i>
+                                       </button>
+                
+                
+                
+
+                                      
+
+                                    </td>
+                                 
+
+
+                                    <td>
+                                      
+                                        <button class="btn btn-primary btn-round ms-auto btn btn-link btn-primary" data-bs-toggle="modal" data-bs-target="#View-Scenerio-Modal">
+                                            <i class="fas fa-file-alt"></i>
+                                        </button>
+
+
+
+                                    <td>
+                                       <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-success">
+                                       <i class="fas fa-file-code"></i>
+                                       </button>
+                                    </td>
+                                    <td>
+                                       <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-warning">
+                                       <i class="fas fa-eye"></i>
+                                       </button>
+                                    </td>
+                                    <td>
+                                       <div class="form-button-action">
+                                          <button 
+                                             type="button"
+                                             data-bs-toggle="tooltip"
+                                             title=""
+                                             class="btn btn-link btn-danger"
+                                             data-original-title="Remove"
+                                             id="delete-modal" >
+                                          <i class="fa fa-times"></i>
+                                          </button>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
+ 
+
+            
+
+
+            <div class="modal fade" id="Generate-Scenerio-Modal" tabindex="-1" role="dialog"  aria-hidden="true" >
+            <div class="modal-dialog modal-xs" role="document">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title">
+                    <span class="fw-mediumbold"> Scenario 
+                    </span>
+                    <span class="fw-light"> Generation </span>
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                   <form>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="defaultSelect">Choose BRD File
+                            </label>
+                            <select class="form-select form-control" id="defaultSelect">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="count">Count of scenarios to generate
+                                </label>
+                                <input type="number" class="form-control" id=" " placeholder="Enter Count">
+                              </div>
+                        </div>
+                    
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer border-0">
+                  <button type="button" id="addRowButton" class="btn btn-primary" > Generate
+                  </button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="modal fade" id="View-Scenerio-Modal" tabindex="-1" role="dialog"  aria-hidden="true" >
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title">
+                    <span class="fw-mediumbold"> Scenarios 
+                    </span>
+                   </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+
+                
+
+
+                    <div class="row mx-0">
+                        <div class="col-md-5">
+                            <div>
+                                <nav class=" navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <button type="submit" class="btn btn-search pe-1">
+                                          <i class="fa fa-search search-icon"></i>
+                                        </button>
+                                      </div>
+                                      <input type="text" placeholder="Search ..." class="form-control">
+                                    </div>
+                                  </nav>
+                              </div>
+                        </div>
+                        <div class="col-md-4 ms-auto">
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary btn-round ms-auto">
+<i class="fas fa-file-export"></i>                                    Export to Excel
+                                  </button>
+                              </div>
+                            
+                        </div>
+                      </div>
+
+
+
+
+                    
+
+
+                   
+
+
+                      <table class="table table-bordered table-bg mt-4">
+                        <thead >
+                          <tr>
+                            <th class="bg-blue" scope="col">Scenario ID	</th>
+                            <th class="bg-blue" scope="col">Filename</th>
+                            <th class="bg-blue" scope="col">Scenario</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                        
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                           <tr>
+                            <td>SC001</td>
+                            <td>FILE001</td>
+                            <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
+                            </td>
+                           </tr>
+                          
+                        </tbody>
+
+                        
+                      </table>
+
+
+                      
+
+
+                   
+                </div>
+
+                
+
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-5 p-5">
+                       <div class="dataTables_info" id="multi-filter-select_info" role="status" aria-live="polite">Showing 1 to 5 of 57 entries</div>
+                    </div>
+                    <div class="col-sm-12 col-md-7 p-5 d-flex justify-content-end">
+                       <div class="dataTables_paginate paging_simple_numbers" id="multi-filter-select_paginate">
+                          <ul class="pagination">
+                             <li class="paginate_button page-item previous disabled" id="multi-filter-select_previous"><a href="#" aria-controls="multi-filter-select" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                             <li class="paginate_button page-item active"><a href="#" aria-controls="multi-filter-select" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                             <li class="paginate_button page-item "><a href="#" aria-controls="multi-filter-select" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                             <li class="paginate_button page-item "><a href="#" aria-controls="multi-filter-select" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+                             <li class="paginate_button page-item "><a href="#" aria-controls="multi-filter-select" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+                             <li class="paginate_button page-item "><a href="#" aria-controls="multi-filter-select" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                             <li class="paginate_button page-item disabled" id="multi-filter-select_ellipsis"><a href="#" aria-controls="multi-filter-select" data-dt-idx="6" tabindex="0" class="page-link">…</a></li>
+                             <li class="paginate_button page-item "><a href="#" aria-controls="multi-filter-select" data-dt-idx="7" tabindex="0" class="page-link">6</a></li>
+                             <li class="paginate_button page-item next" id="multi-filter-select_next"><a href="#" aria-controls="multi-filter-select" data-dt-idx="8" tabindex="0" class="page-link">Next</a></li>
+                          </ul>
+                       </div>
+                    </div>
+                 </div>
+
+
+
+
+
+                <div class="modal-footer border-0">
+                  <button type="button" id="addRowButton" class="btn btn-primary" > Generate
+                  </button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          
+            <footer class="footer">
+               <div class="container-fluid d-flex justify-content-between">
+                  <div class="copyright">
+                     2024©VolPay, Volante Technologies Inc.
+                  </div>
+                  <div>
+                     Version: 1
+                     <a target="_blank">
+                     25-07-2024 12:30:56 (IST)
+                     </a>.
+                  </div>
+               </div>
+            </footer>
+         </div>
+         <!-- End Custom template -->
+      </div>
+      <script src="assets/js/core/jquery-3.7.1.min.js"></script>
+      <script src="assets/js/core/popper.min.js"></script>
+      <script src="assets/js/sweetalert.min.js"></script>
+      <script src="assets/js/core/bootstrap.min.js"></script>
+      <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+      <script src="assets/js/custom.min.js"></script>
+      <script>
+         var SweetAlert2Demo = (function () {
+           var initDemos = function () {
+           
+             $("#delete-modal").click(function (e) {
+              swal({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                type: "warning",
+                buttons: {
+                  confirm: {
+                    text: "Yes, delete it!",
+                    className: "btn btn-success",
+                  },
+                  cancel: {
+                    visible: true,
+                    className: "btn btn-danger",
+                  },
+                },
+              }).then((Delete) => {
+                if (Delete) {
+                  swal({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    type: "success",
+                    buttons: {
+                      confirm: {
+                        className: "btn btn-success",
+                      },
+                    },
+                  });
+                } else {
+                  swal.close();
+                }
+              });
+            });
+         
+            
+          };
+         
+          return {
+            //== Init
+            init: function () {
+              initDemos();
+            },
+          };
+         })();
+         
+         //== Class Initialization
+         jQuery(document).ready(function () {
+          SweetAlert2Demo.init();
+         });
+      </script>
+   </body>
+</html>
