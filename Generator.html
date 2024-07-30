@@ -5,8 +5,7 @@
       <title>Volante Test Case Generator - Generator</title>
       <meta
          content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-         name="viewport"
-         />
+         name="viewport"/>
       <link rel="icon" href="assets/img/favicon.png" type="image/x-icon"/>
       <script src="assets/js/plugin/webfont/webfont.min.js"></script>
       <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -255,37 +254,23 @@
                                     <td>AZQSESOW1	</td>
                                     <td>JOB001</td>
                                     <td>
-                                      
                                        <button class="btn btn-primary btn-round ms-auto btn btn-link btn-warning" data-bs-toggle="modal" data-bs-target="#Generate-Scenerio-Modal">
                                         <i class="fas fa-eye"></i>
                                        </button>
-                
-                
-                
-
-                                      
-
                                     </td>
-                                 
-
-
                                     <td>
-                                      
                                         <button class="btn btn-primary btn-round ms-auto btn btn-link btn-primary" data-bs-toggle="modal" data-bs-target="#View-Scenerio-Modal">
                                             <i class="fas fa-file-alt"></i>
                                         </button>
-
-
-
                                     <td>
                                        <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-success">
                                        <i class="fas fa-file-code"></i>
                                        </button>
                                     </td>
                                     <td>
-                                       <button type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-warning">
-                                       <i class="fas fa-eye"></i>
-                                       </button>
+                                       <button class="btn btn-link btn-warning" data-bs-toggle="modal" data-bs-target="#View-Test-Case-Modal">
+                                          <i class="fas fa-eye"></i>
+                                         </button>
                                     </td>
                                     <td>
                                        <div class="form-button-action">
@@ -318,85 +303,50 @@
                        <span class="fw-light"> List </span>
                      </h5>
                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-   
                    </div>
                    <div class="modal-body">
-                  
-
 <ul>
-
    <li>
-      
                      <div class="d-flex flex-row bd-highlight mb-2 card">
                         <div class="p-2 bd-highlight">
-                           
                            <div class="form-check">
                               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             </div>
-
                         </div>
                         <div class="p-2 bd-highlight">
-                           
                            <p class="p-2 mb-0"> 1. Verify that Volpay receives the API-05 (Pacs.008) request from CACIB.
                            </p>
                         </div>
                        </div>
-
-                       
    </li>
-
-
-
    <li>
-      
       <div class="d-flex flex-row bd-highlight mb-2 card">
          <div class="p-2 bd-highlight">
-            
             <div class="form-check">
                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
              </div>
-
          </div>
          <div class="p-2 bd-highlight">
-            
             <p class="p-2 mb-0"> 2. Verify that Volpay properly extracts the key parameters from the Pacs.008 request to pass to the SAPI Account Lookup interface.
             </p>
          </div>
         </div>
-
-        
 </li>
-
-
-
 <li>
-      
    <div class="d-flex flex-row bd-highlight mb-2 card">
       <div class="p-2 bd-highlight">
-         
          <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
           </div>
-
       </div>
       <div class="p-2 bd-highlight">
-         
          <p class="p-2 mb-0"> 3. Verify that Volpay invokes the Beneficiary Account Lookup service through SAPI using the key parameters.
          </p>
       </div>
      </div>
-
-     
 </li>
-
-
-
-
                      </ul> 
-
-                  
                      <div class="d-flex justify-content-center">
-                        
                         <div class="wrappers mt-2">
                            <div class="content">
                              <div class="circle animation one"></div>
@@ -408,16 +358,9 @@
                              <div class="circle animation seven"></div>
                              <div class="circle animation eight"></div>
                            </div>
-                        
                            <span>Please wait</span>
                          </div>
                      </div>
-
-
-                     
-
-
-
                     </div>
                    <div class="modal-footer border-0">
                      <button type="button" class="btn btn-primary"> Save Selected Scenarios
@@ -436,7 +379,6 @@
                     <span class="fw-light"> Generation </span>
                   </h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
                 </div>
                 <div class="modal-body">
                    <form>
@@ -454,8 +396,6 @@
                             </select>
                           </div>
                         </div>
-
-
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="count">Count of scenarios to generate
@@ -463,21 +403,65 @@
                                 <input type="number" class="form-control" id=" " placeholder="Enter Count">
                               </div>
                         </div>
-                    
                     </div>
                   </form>
                 </div>
                 <div class="modal-footer border-0">
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Generate-Modal" > Generate
                   </button>
-                
                 </div>
-
-
-
- 
-
-
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="View-Test-Case-Modal" tabindex="-1" role="dialog"  aria-hidden="true" >
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                   <h5 class="modal-title">
+                     <span class="fw-mediumbold"> View  
+                     </span>
+                     <span class="fw-light"> Test Case Scenarios  </span>
+                   </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row mx-0">
+                     <div class="col-md-5">
+                         <div>
+                             <nav class=" navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex">
+                                 <div class="input-group">
+                                   <div class="input-group-prepend">
+                                     <button type="submit" class="btn btn-search pe-1">
+                                       <i class="fa fa-search search-icon"></i>
+                                     </button>
+                                   </div>
+                                   <input type="text" placeholder="Search ..." class="form-control">
+                                 </div>
+                               </nav>
+                           </div>
+                     </div>
+                   </div>
+                   <table class="table table-bordered table-bg mt-4">
+                     <thead>
+                       <tr>
+                         <th class="bg-blue" scope="col">Scenario ID	</th>
+                         <th class="bg-blue" scope="col">Filename</th>
+                         <th class="bg-blue" scope="col">Scenario Text	</th>
+                         <th class="bg-blue" scope="col">View Testcase
+                        </th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>SC001</td>
+                         <td>FILE001</td>
+                         <td> Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.	
+                         </td>
+                         <td> <a href="" > View </a></td>
+                        </tr>
+                      </tbody>
+                   </table>
+                </div>
               </div>
             </div>
           </div>
@@ -490,13 +474,8 @@
                     </span>
                    </h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
                 </div>
                 <div class="modal-body">
-
-                
-
-
                     <div class="row mx-0">
                         <div class="col-md-5">
                             <div>
@@ -515,22 +494,12 @@
                         <div class="col-md-4 ms-auto">
                             <div class="d-flex justify-content-end">
                                 <button class="btn btn-primary btn-round ms-auto">
-<i class="fas fa-file-export"></i>                                    Export to Excel
+                                    <i class="fas fa-file-export"></i>
+                                   Export to Excel
                                   </button>
                               </div>
-                            
                         </div>
                       </div>
-
-
-
-
-                    
-
-
-                   
-
-
                       <table class="table table-bordered table-bg mt-4">
                         <thead >
                           <tr>
@@ -546,7 +515,6 @@
                             <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
                             </td>
                            </tr>
-                        
                            <tr>
                             <td>SC001</td>
                             <td>FILE001</td>
@@ -607,22 +575,9 @@
                             <td>Verify that Volpay is able to parse the Inward Pacs.008 (API-05) JSON request correctly.
                             </td>
                            </tr>
-                          
                         </tbody>
-
-                        
                       </table>
-
-
-                      
-
-
-                   
                 </div>
-
-                
-
-
                 <div class="row">
                     <div class="col-sm-12 col-md-5 p-5">
                        <div class="dataTables_info" id="multi-filter-select_info" role="status" aria-live="polite">Showing 1 to 5 of 57 entries</div>
@@ -643,15 +598,9 @@
                        </div>
                     </div>
                  </div>
-
-
-
-
-
                 <div class="modal-footer border-0">
                   <button type="button" id="addRowButton" class="btn btn-primary" > Generate
                   </button>
-                
                 </div>
               </div>
             </div>
@@ -681,7 +630,6 @@
       <script>
          var SweetAlert2Demo = (function () {
            var initDemos = function () {
-           
              $("#delete-modal").click(function (e) {
               swal({
                 title: "Are you sure?",
@@ -714,10 +662,7 @@
                 }
               });
             });
-         
-            
           };
-         
           return {
             //== Init
             init: function () {
@@ -725,7 +670,6 @@
             },
           };
          })();
-         
          //== Class Initialization
          jQuery(document).ready(function () {
           SweetAlert2Demo.init();
